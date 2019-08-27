@@ -46,6 +46,9 @@ Route::post('/book',function(Request $request){
 
 });
 
-Route::delete('/book',function(Book $book){
+Route::delete('/book/{book}',function(Book $book){
+  $book->delete();
+
+  return redirect('/');
 
 });
